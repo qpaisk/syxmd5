@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>密码</title>
+  <style>
+  input{
+    width:200px;
+   height:40px;
+   }
+ center{
+   margin-top:200px;
+   }
+ #ok{
+   margin-top:20px;
+   }
+ body{
+   background-color:Black;
+   }
+ </style>
+  </head>
+  <body>	
+   <center>
+   <input id="pwd" type="password" placeholder="请输入密码"/>
+   <br>
+   <input id="ok" onclick="ok();" type="button" value="确定"/>
+   </center>
+   <script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script><script type="text/javascript">
+  var syxm = (md5("syxzlz"));
+</script>
+   <script>
+   function ok(){
+       let pwd =document.getElementById("pwd").value;
+       let syxd = (md5(pwd))
+   if(syxd = syxm){
+   alert("密码正确");
+   window.open("syx.md5.html");
+   } else{
+   alert("密码错误");
+   }
+   }
+	</script>
+ <script>
+function isIE() {
+var userAgent = navigator.userAgent;
+var pc = !/android|iphone|linux|micromessenger/i.test(userAgent)
+var isIE = /compatible/i.test(userAgent) && /MSIE/i.test(userAgent)
+var isIE11 = /Trident/i.test(userAgent) && /rv:11.0/i.test(userAgent)
+return Boolean(pc && (isIE || isIE11))
+}
+if (isIE()) {
+alert('对不起此网站不兼容ie浏览器，请更换浏览器访问。')
+}
+</script> 
+  </body>
+  </html>
